@@ -4,9 +4,9 @@ const Restaurant = (props) => {
     <div className="section">
       <div className="first-section">
         <h1>{restaurant}</h1>
-        <p>{description}</p>
+        <div className="baseline">{description}</div>
       </div>
-      <img src={picture} alt="" />
+      <img src={picture} alt="" className="photo-first-section" />
     </div>
   );
 };

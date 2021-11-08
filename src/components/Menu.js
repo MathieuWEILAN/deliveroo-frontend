@@ -1,6 +1,6 @@
 import Plat from "./Plat";
 const Menu = (props) => {
-  const { categories } = props;
+  const { categories, onClick } = props;
   return (
     <div>
       <div className="menu">
@@ -8,7 +8,7 @@ const Menu = (props) => {
           return (
             <div key={i}>
               <h2>{categorie.name}</h2>
-              <Plat meals={categorie.meals} />
+              <Plat meals={categorie.meals} onClick={onClick} />
             </div>
           );
         })}
