@@ -1,1 +1,97 @@
 /* Other rules */
+
+/* @font-face {
+  font-family: "Bw Modelica";
+  src: url("BwModelica-Regular.woff2") format("woff2"),
+    url("BwModelica-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bw Modelica";
+  src: url("BwModelica-Bold.woff2") format("woff2"),
+    url("BwModelica-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+} */
+
+body {
+  background-color: azure;
+  /* font-family: "Bw Modelica"; */
+}
+
+img {
+  width: 200px;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.top-bar {
+  border-bottom: rgb(243, 240, 240) 1px solid;
+}
+.section {
+  display: flex;
+  margin: 20px 0;
+  background-color: wheat;
+}
+
+.first-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.first-section img {
+  margin: 20px;
+}
+
+.menu {
+  background-color: violet;
+  width: 66%;
+}
+
+.plat {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 0 -10 px;
+  border: 4px solid salmon;
+}
+
+.each {
+  border-radius: 5 px;
+  height: 160 px;
+  background: #fff;
+  padding: 15 px;
+  display: flex;
+  flex: 1;
+
+  cursor: pointer;
+  border: 2px solid greenyellow;
+}
+
+.each img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.text {
+  flex: 1 1;
+  margin-right: 15 px;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #808484;
+  line-height: 1.3rem;
+  height: 2.6 rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 1 rem;
+}
