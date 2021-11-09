@@ -7,8 +7,8 @@ const Plat = (props) => {
           <div
             key={i}
             className="each"
-            onClick={(event) => {
-              onClick(event, meal.title, meal.price, meal.id);
+            onClick={() => {
+              onClick(meal.title, meal.price, meal.id);
             }}
           >
             <div className="text">

@@ -38,6 +38,8 @@ img {
   margin: 0 auto;
   background-color: #f3f5f5;
   display: flex;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .top-bar {
@@ -72,7 +74,8 @@ img {
   display: flex;
   flex-direction: column;
   background-color: #f3f5f5;
-  width: 66%;
+  /* width: 66%; */
+  flex: 2;
 }
 
 .plat {
@@ -137,4 +140,52 @@ h4 {
   justify-content: space-between;
   margin: 0 30px 0 0;
   align-items: center;
+}
+
+.basket {
+  display: flex;
+  flex-direction: column;
+  flex: 0.8;
+  /* width: 30%; */
+  background-color: white;
+  border-radius: 20px;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+
+.valid {
+  width: 60%;
+  height: 3em;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: #1acdbd;
+  color: white;
+  font-size: 16px;
+  border: none;
+}
+.valid:hover {
+  cursor: pointer;
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.basket-button {
+  display: flex;
+  align-items: center;
+}
+
+.bkt-btn {
+  margin: 5px 10px;
+  border-radius: 50%;
+  color: #1acdbd;
+  background-color: white;
+  border: 2px solid #1acdbd;
+}
+
+.bkt-btn:hover {
+  cursor: pointer;
 }

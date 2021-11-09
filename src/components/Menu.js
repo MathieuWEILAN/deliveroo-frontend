@@ -2,8 +2,8 @@ import Plat from "./Plat";
 const Menu = (props) => {
   const { categories, onClick } = props;
   return (
-    <div>
-      <div className="menu">
+    <div className="menu">
+      <div>
         {categories.map((categorie, i) => {
           return (
             <div key={i}>

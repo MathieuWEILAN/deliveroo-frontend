@@ -30,15 +30,28 @@ function App() {
     fetchData();
   }, []);
 
-  const buyItem = (event, title, price, id) => {
-    event.preventDefault();
-    // console.log("achat de ", data.categories);
+  const buyItem = (title, price, id) => {
     const newItem = { title: title, price: price, id: id, quantity: 1 };
     const newBasket = [...basket];
-    newBasket.push(newItem);
+    // console.log(newBasket, newItem);
+
+    if (newBasket.length > 0) {
+      for (let i = 0; i < newBasket.length; i++) {
+        if (newBasket[i].id === newItem.id) {
+          newBasket[i].quantity++;
+          console.log("nouvelle quantité", newBasket[i].quantity);
+        } else {
+          newBasket.push(newItem);
+          console.log("nouvelle item");
+        }
+      }
+    } else {
+      newBasket.push(newItem);
+    }
     setBasket(newBasket);
-    console.log("dans mon panier", newItem, newBasket);
+    console.log("nouveau panier", newBasket);
   };
+
   // console.log("2");
   return isLoading ? (
     <span>is loading</span>
@@ -60,7 +73,8 @@ function App() {
       </div>
       <div className="container-2">
         <Menu categories={data.categories} onClick={buyItem} />
-        <Basket basket={basket} />
+
+        <Basket basket={basket} setBasket={setBasket} />
       </div>
     </div>
   );
