@@ -149,8 +149,11 @@ h4 {
   /* width: 30%; */
   background-color: white;
   border-radius: 20px;
-  padding: 0px 10px;
+  padding: 0px 10px 40px;
   box-sizing: border-box;
+  height: 100%;
+  position: sticky;
+  top: 60px;
 }
 
 .valid {
@@ -162,6 +165,10 @@ h4 {
   color: white;
   font-size: 16px;
   border: none;
+}
+.unvalid {
+  background-color: grey;
+  color: black;
 }
 .valid:hover {
   cursor: pointer;
@@ -188,4 +195,24 @@ h4 {
 
 .bkt-btn:hover {
   cursor: pointer;
+}
+
+.empty {
+  text-align: center;
+  margin: 50px;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+}
+
+.sous-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.bar {
+  border-top: grey solid 1px;
 }

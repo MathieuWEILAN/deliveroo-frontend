@@ -31,21 +31,20 @@ function App() {
   }, []);
 
   const buyItem = (title, price, id) => {
-    const newItem = { title: title, price: price, id: id, quantity: 1 };
+    const newItem = {
+      title: title,
+      price: Number(price),
+      id: id,
+      quantity: 1,
+    };
     const newBasket = [...basket];
-    // console.log(newBasket, newItem);
-
-    if (newBasket.length > 0) {
-      for (let i = 0; i < newBasket.length; i++) {
-        if (newBasket[i].id === newItem.id) {
-          newBasket[i].quantity++;
-          console.log("nouvelle quantité", newBasket[i].quantity);
-        } else {
-          newBasket.push(newItem);
-          console.log("nouvelle item");
-        }
-      }
+    if (newBasket.some((el) => el.id === newItem.id)) {
+      const index = newBasket.findIndex((el) => el.id === newItem.id);
+      newBasket[index].quantity++;
+      newBasket[index].total =
+        newBasket[index].price * newBasket[index].quantity;
     } else {
+      newItem["total"] = newItem.price;
       newBasket.push(newItem);
     }
     setBasket(newBasket);

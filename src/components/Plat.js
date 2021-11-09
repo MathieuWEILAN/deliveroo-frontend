@@ -1,5 +1,6 @@
 const Plat = (props) => {
   const { meals, onClick } = props;
+
   return (
     <div className="plat">
       {meals.map((meal, i) => {
