@@ -6,10 +6,12 @@ const Menu = (props) => {
       <div>
         {categories.map((categorie, i) => {
           return (
-            <div key={i}>
-              <h2>{categorie.name}</h2>
-              <Plat meals={categorie.meals} onClick={onClick} />
-            </div>
+            categorie.meals.length > 0 && (
+              <div key={i}>
+                <h2>{categorie.name}</h2>
+                <Plat meals={categorie.meals} onClick={onClick} />
+              </div>
+            )
           );
         })}
       </div>
