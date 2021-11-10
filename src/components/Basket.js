@@ -1,23 +1,11 @@
 const Basket = (props) => {
   const { basket, setBasket } = props;
   const costShipping = (2.5).toFixed(2);
-  let totalBasket = basket.reduce((total, obj) => obj.total + total, 0);
+  let totalBasket = basket.reduce((somme, obj1) => obj1.total + somme, 0);
   totalBasket = Number(totalBasket);
   totalBasket = totalBasket.toFixed(2);
 
   const totalOfTotal = costShipping + totalBasket;
-
-  const remove = (i) => {
-    const newBasket = [...basket];
-    if (newBasket[i].quantity === 0) {
-      const emptyBasket = newBasket.filter((elem) => elem.quantity >= 1);
-      setBasket(emptyBasket);
-    } else {
-      newBasket[i].quantity--;
-      newBasket[i].total = newBasket[i].quantity * newBasket[i].price;
-      setBasket(newBasket);
-    }
-  };
 
   return (
     <div className="basket">
@@ -35,12 +23,10 @@ const Basket = (props) => {
                   <button
                     onClick={() => {
                       const newBasket = [...basket];
-
                       newBasket[i].quantity--;
                       newBasket[i].total =
                         newBasket[i].quantity * newBasket[i].price;
                       setBasket(newBasket);
-
                       if (newBasket[i].quantity === 0) {
                         const emptyBasket = newBasket.filter(
                           (elem) => elem.quantity >= 1

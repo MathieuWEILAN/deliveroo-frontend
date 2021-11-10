@@ -38,6 +38,7 @@ function App() {
       quantity: 1,
     };
     const newBasket = [...basket];
+    //methode .some(callback) renvoie un booleen pour voir si la callback est true or false. la fonction teste si  au moins 1 élément du tableau passe le test (la callback). On peut aussi utiliser la methode .find(callback).
     if (newBasket.some((el) => el.id === newItem.id)) {
       const index = newBasket.findIndex((el) => el.id === newItem.id);
       newBasket[index].quantity++;
