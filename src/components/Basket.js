@@ -67,7 +67,7 @@ const Basket = (props) => {
         <div className="total">
           <div className="sous-total bar">
             <div>Sous total</div>
-            <div>{totalBasket}</div>
+            <div>{totalBasket}€</div>
           </div>
           <div className="sous-total">
             <div>Frais de livraison</div>
